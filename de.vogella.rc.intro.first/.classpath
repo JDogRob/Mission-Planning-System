@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry excluding="de/vogella/rc/intro/first/ParseMissionPlanningAutomatedTimeSequenceFile.java|de/vogella/rc/intro/first/DisplayTime.java|de/vogella/rc/intro/first/ATSBuffer1View.java|de/vogella/rc/intro/first/ATSBuffer2View.java|de/vogella/rc/intro/first/CreateCommaDelimited.java|de/vogella/rc/intro/first/TestHandler.java|de/vogella/rc/intro/first/DisplayCurrentTime.java|de/vogella/rc/intro/first/HandlerOpenFile.java|de/vogella/rc/intro/first/CreateTDRSSModel.java|de/vogella/rc/intro/first/ParseOrbitEventsFile.java|de/vogella/rc/intro/first/CreateModel.java|de/vogella/rc/intro/first/GhanttChartViewToolBarOpenFile.java|de/vogella/rc/intro/first/SunInterval.java|de/vogella/rc/intro/first/TimeJob.java|de/vogella/rc/intro/first/TimeFlow.java|de/vogella/rc/intro/first/TableControl.java|de/vogella/rc/intro/first/ActivityTableView.java" kind="src" path="src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

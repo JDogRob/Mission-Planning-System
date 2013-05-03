@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="de.vogella.rc.intro.first.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="de.vogella.rc.intro.first.Perspective"
+            fixed="true"
+            id="de.vogella.rc.intro.first.perspective"
+            name="RCP Perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            class="de.vogella.rc.intro.first.GhanttChartView"
+            icon="icons/clock_play.png"
+            id="de.robinson.ghanttChartView"
+            name="Activity Viewer"
+            restorable="true">
+      </view>
+      <view
+            class="de.vogella.rc.intro.first.ActivityTableView"
+            id="robinson.schedule.tableView"
+            name="Activity_Viewer"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            class="de.vogella.rc.intro.first.DigitalClockView"
+            icon="icons/Clock.png"
+            id="robinson.schedule.digital.clock"
+            name="Time Management"
+            restorable="true">
+      </view>
+      <view
+            class="de.vogella.rc.intro.first.ActivityList"
+            id="robinson.activitylist"
+            name="Activity List"
+            restorable="true">
+      </view>
+     
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            description="Command Category Description"
+            id="de.vogella.rc.intro.first.category2"
+            name="Command Category Name">
+      </category>
+      <command
+            id="de.vogella.rc.intro.first.menu.command.openFileCommand"
+            name="openFileCommand">
+      </command>
+      <command
+            id="de.vogella.rc.intro.first.exitApplicationCommand"
+            name="exitApplicationCommand">
+      </command>
+      <command
+            defaultHandler="CallEditor"
+            id="robinson.jason.openEditor"
+            name="Open Editor">
+      </command>
+      <command
+            id="robinson.jason.openCommPassFile"
+            name="Open Comm Pass File">
+      </command>
+      <command
+            id="robinson.jason.openDeltaVFile"
+            name="Open Delta V File">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="applicationTopToolBar">
+            <command
+                  commandId="robinson.jason.openCommPassFile"
+                  icon="icons/Antenna.png"
+                  label="Open Comm Pass File"
+                  style="push">
+            </command>
+            <command
+                  commandId="de.vogella.rc.intro.first.menu.command.openFileCommand"
+                  icon="icons/folder_page.png"
+                  label="Open File"
+                  style="push">
+            </command>
+            <command
+                  commandId="robinson.jason.openDeltaVFile"
+                  icon="icons/folder_page.png"
+                  label="Open Delta-V File"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.vogella.rc.intro.first.HandlerOpenNewFile"
+            commandId="de.vogella.rc.intro.first.menu.command.openFileCommand">
+      </handler>
+      <handler
+            class="de.vogella.rc.intro.first.OpenCommPassFileHandler"
+            commandId="robinson.jason.openCommPassFile">
+      </handler>
+      <handler
+            class="de.vogella.rc.intro.first.HandlerOpenDeltaVFile"
+            commandId="robinson.jason.openDeltaVFile">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="MainEditorView"
+            default="false"
+            icon="icons/newPhaseIcon.png"
+            id="robinson.jason.main.view.editor"
+            name="Main View Editor">
+      </editor>
+      <editor
+            class="de.vogella.rc.intro.first.NewPhaseEditor"
+            default="false"
+            icon="icons/newPhaseIcon.png"
+            id="robinson.jason.new.phase.editor"
+            name="New Phase Editor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,6 +1,6 @@
 package de.vogella.rc.intro.first;
 
-//test
+//testfasdfasd Part II
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
